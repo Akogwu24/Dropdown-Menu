@@ -71,20 +71,20 @@
 - **Snapshot Tests:** Ensure the UI doesn't change unexpectedly.
 - **Accessibility Tests:** Use tools like `jest-axe` to check for common accessibility violations in tests.
 
-### **Component Interaction Flow (Mermaid Diagram)**
-
-```mermaid
 graph TD
-    A[User Interaction] --> B{Click Trigger Button};
-    B -- Open Menu --> C[Dropdown Menu Component];
-    C -- Set aria-expanded="true" --> D[Menu Items Visible];
-    D -- Focus on First Item --> E[Keyboard Navigation];
-    E -- Arrow Keys --> F[Navigate Items];
-    E -- Enter/Space --> G[Select Item];
-    G -- Call onSelect --> H[Execute Action];
-    H -- Close Menu --> I[Dropdown Menu Component];
-    I -- Set aria-expanded="false" --> J[Menu Items Hidden];
-    J -- Return Focus --> A;
-    B -- Close Menu --> I;
-    E -- Escape Key --> I;
+A[User Interaction] --> B{Click Trigger Button};
+B -- Open Menu --> C[Dropdown Menu Component];
+C -- Set aria-expanded="true" --> D[Menu Items Visible];
+D -- Focus on First Item --> E[Keyboard Navigation];
+E -- Arrow Keys --> F[Navigate Items];
+E -- Enter/Space --> G[Select Item];
+G -- Call onSelect --> H[Execute Action];
+H -- Close Menu --> I[Dropdown Menu Component];
+I -- Set aria-expanded="false" --> J[Menu Items Hidden];
+J -- Return Focus --> A;
+B -- Close Menu --> I;
+E -- Escape Key --> I;
+
+```
+
 ```
